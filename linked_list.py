@@ -63,9 +63,8 @@ class DoublyLinkedList(Structure):
             new_node.next.prev = new_node
 
 
-    def insert(self, data , next_to, prev_to):
+    def insert(self, data, next_to):
         current = self.search(next_to)
-        current = self.search(prev_to)
         
         if current:
             new_node = Node(data)

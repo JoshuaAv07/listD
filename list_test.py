@@ -51,7 +51,7 @@ if __name__ == '__main__':
 
     print(t.center(50,'-'))   
 
-    #my_list.insertAfter("Alex", "David")
+    my_list.insert("Alex", "David")
 
     for name in my_list.iter():
         print(name)
