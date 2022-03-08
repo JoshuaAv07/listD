@@ -52,6 +52,7 @@ if __name__ == '__main__':
     print(t.center(50,'-'))   
 
     my_list.insert("Alex", "David")
+    my_list.insert2("Isaac", "Luis")
 
     for name in my_list.iter():
         print(name)

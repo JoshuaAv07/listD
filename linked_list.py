@@ -87,6 +87,27 @@ class DoublyLinkedList(Structure):
         else:
             raise ValueError("Positional element is not in the list")
 
+    def insert2(self, data, next_to):
+        current = self.search(next_to)
+        
+        if current:
+            new_node = Node(data)
+
+            if current == self._tail:
+                current.next = new_node
+                self._tail = current.next
+                new_node.prev = current
+
+            else:
+                new_node.next = current.next
+                current.next = new_node
+                new_node.prev = current
+                new_node.prev = new_node
+
+            self._size += 1
+        else:
+            raise ValueError("Positional element is not in the list")
+
     def search(self,data):
         current = self._front
 
